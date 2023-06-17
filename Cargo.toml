@@ -1,0 +1,28 @@
+[package]
+name = "test-group"
+description = "Organize tests into groups with macros for filtering in nextest"
+version = "1.0.0"
+edition = "2021"
+readme = "README.md"
+homepage = "https://github.com/sergiimk/test-group"
+repository = "https://github.com/sergiimk/test-group"
+documentation = "https://docs.rs/test-group"
+authors = ["Sergii Mikhtoniuk <mikhtoniuk@gmail.com>"]
+license = "MIT OR Apache-2.0"
+keywords = ["testing", "nextest"]
+include = [
+    "src/**/*.rs",
+    "Cargo.toml",
+]
+
+
+[lib]
+proc-macro = true
+
+
+[dependencies]
+hex = { version = "0.4", default-features = false, features = ["std"] }
+proc-macro2 = { version = "1", default-features = false }
+sha2 = { version = "0.10", default-features = false }
+syn = { version = "2", default-features = false, features = ["parsing", "proc-macro"] }
+quote = { version = "1", default-features = false }
