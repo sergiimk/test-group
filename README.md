@@ -72,7 +72,7 @@ Allowing you to filter tests by group in your `.config/nextest.toml` as such:
 ```toml
 [[profile.default.overrides]]
 filter = 'test(::heavy::)'
-max-threads = 1
+threads-required = 4
 
 [[profile.default.overrides]]
 filter = 'test(::flaky::)'
